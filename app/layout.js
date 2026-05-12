@@ -9,30 +9,39 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
-        <nav style={{ 
-          padding: '1.5rem 2rem', 
-          borderBottom: '1px solid var(--border)', 
-          backdropFilter: 'blur(10px)',
-          position: 'sticky',
-          top: 0,
-          zIndex: 50,
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <nav>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <div style={{ 
-              width: '32px', 
-              height: '32px', 
-              background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)',
-              borderRadius: '8px'
-            }}></div>
-            <span style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em' }}>TRIBBOT</span>
+              width: '36px', 
+              height: '36px', 
+              background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)',
+              borderRadius: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
+            }}>
+              <span style={{ fontWeight: 900, color: '#fff', fontSize: '1.2rem' }}>T</span>
+            </div>
+            <span style={{ fontWeight: 800, fontSize: '1.3rem', letterSpacing: '-0.02em' }}>TRIBBOT</span>
           </div>
-          <div style={{ display: 'flex', gap: '2rem', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-muted)' }}>
-            <a href="/" style={{ color: 'var(--text)' }}>Overview</a>
-            <a href="#">Membres</a>
-            <a href="#">Rapports</a>
+          
+          <div className="nav-links">
+            <a href="/" className="nav-link active">Overview</a>
+            <a href="#" className="nav-link">Membres</a>
+            <a href="#" className="nav-link">Rapports</a>
+          </div>
+
+          <div style={{ 
+            background: 'var(--glass)', 
+            padding: '0.5rem 1rem', 
+            borderRadius: '2rem', 
+            border: '1px solid var(--border)',
+            fontSize: '0.8rem',
+            fontWeight: 600,
+            color: 'var(--accent)'
+          }}>
+            SYSTEM ONLINE
           </div>
         </nav>
         {children}
