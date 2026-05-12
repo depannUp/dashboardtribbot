@@ -1,12 +1,16 @@
 import { db } from '../lib/firebase';
 import { Users, Ticket, CheckCircle, Clock } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 async function getStats() {
+  if (!db) return { opened: 0, closed: 0, byMonth: {} };
   const doc = await db.collection('stats').doc('global').get();
   return doc.exists ? doc.data() : { opened: 0, closed: 0, byMonth: {} };
 }
 
 async function getRecentHistory() {
+  if (!db) return [];
   // On récupère les 5 derniers relevés de présence
   const snapshot = await db.collection('presence_history').limit(5).get();
   const history = [];
