@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
           </div>
           
           <div className="nav-links">
-            <a href="/" className="nav-link active">Overview</a>
-            <a href="#" className="nav-link">Membres</a>
-            <a href="#" className="nav-link">Rapports</a>
+            <a href="/" className="nav-link">Overview</a>
+            <a href="/members" className="nav-link">Membres</a>
+            <a href="/reports" className="nav-link">Rapports</a>
           </div>
 
           <div style={{ 

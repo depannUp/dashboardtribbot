@@ -78,7 +78,7 @@ export default async function Dashboard() {
           <button style={{ 
             background: 'none', 
             border: 'none', 
-            color: var(--primary), 
+            color: 'var(--primary)', 
             display: 'flex', 
             alignItems: 'center', 
             gap: '0.5rem',
